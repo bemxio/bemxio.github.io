@@ -17,14 +17,6 @@ body {
     float: right;
 }
 
-.align-left {
-    margin-left: auto;
-}
-
-.align-right {
-    margin-left: auto;
-}
-
 .regular-padding {
     padding: 18px 24px;
 }
@@ -37,7 +29,7 @@ body {
     background-color: rgb(13, 13, 13);
 }
 
-/* the home page */
+/* the bar stuff */
 #bar {
     overflow: hidden;
     background-color: rgb(20, 20, 20);
@@ -63,6 +55,7 @@ body {
     background: black;
 }
 
+/* the home page's >w< face */
 #face {
     position: absolute;
     filter: invert(20%);
@@ -73,38 +66,3 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
-
-/* the about page */
-#about-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-
-    margin-top: 70px;
-    margin-bottom: 10px;
-}
-
-#about-content {
-    margin-left: 10px;
-}
-
-/*
-#about-table-introduction {
-    margin-left: 10px;
-    font-weight: bold;
-}
-
-#about-table {
-    margin-left: 10px;
-    background-color: rgb(20, 20, 20);
-    width: 30%;
-}
-
-#about-table-caption {
-    text-align: center;
-}
-
-.about-table-row {
-    display: inline-flex;
-}
-*/
