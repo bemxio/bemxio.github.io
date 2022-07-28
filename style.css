@@ -29,11 +29,28 @@ body {
     background-color: rgb(13, 13, 13);
 }
 
+/* animations */
+@keyframes rotation-keyframe {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.rotation {
+    animation: rotation-keyframe 1.5s ease 0s 1 normal forwards;
+}
+
 /* the bar stuff */
 #bar {
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     position: fixed;
+    
+    user-select: none;
 
     top: 0;
     width: 100%;
@@ -82,4 +99,6 @@ body {
     
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+
+    user-select: none;
 }
