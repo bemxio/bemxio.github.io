@@ -55,6 +55,23 @@ body {
     background: black;
 }
 
+/* the disclaimer */
+.disclaimer {
+    position: fixed;
+    bottom: 0;
+
+    font-size: 10px;
+    color: rgb(60, 60, 60);
+
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.disclaimer a {
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+}
+
 /* the home page's >w< face */
 #face {
     position: absolute;
