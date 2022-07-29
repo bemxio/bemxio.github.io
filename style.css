@@ -40,8 +40,40 @@ body {
     }
 }
 
-.rotation {
-    animation: rotation-keyframe 1.5s ease 0s 1 normal forwards;
+@keyframes fade-keyframe {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shake-keyframe {
+	0% {
+		transform: translate(-100%, -100%) translate(0);
+	}
+
+	20% {
+		transform: translate(-100%, -100%) translate(-5px, 5px);
+	}
+
+	40% {
+		transform: translate(-100%, -100%) translate(-5px, -5px);
+	}
+
+	60% {
+		transform: translate(-100%, -100%) translate(5px, 5px);
+	}
+
+	80% {
+		transform: translate(-100%, -100%) translate(5px, -5px);
+	}
+
+	100% {
+		transform: translate(-100%, -100%) translate(0);
+	}
 }
 
 /* the bar stuff */
@@ -101,4 +133,34 @@ body {
     -webkit-transform: translate(-50%, -50%);
 
     user-select: none;
+}
+
+.face-rotate {
+    animation: rotation-keyframe 1.5s ease 0s 1 normal forwards;
+}
+
+/* the secrets */
+.invincible {
+    display: none;
+}
+
+.makoto {
+    /* opacity: 0; */
+
+    position: absolute;
+    left: 98%;
+    top: 97%;
+    
+    transform: translate(-100%, -100%);
+    -webkit-transform: translate(-100%, -100%);
+}
+
+.makoto-fade {
+    display: block;
+    animation: fade-keyframe 7s ease 0s 1 normal forwards;
+}
+
+.makoto-shake {
+    display: block;
+    animation: shake-keyframe 0.2s ease 0s infinite normal forwards;
 }
