@@ -8,6 +8,12 @@
 }
 
 #about-content {
+    text-align: center;
+    margin-left: 20px;
+}
+
+#about-github-stats {
+    text-align: center;
     margin-left: 20px;
 }
 
