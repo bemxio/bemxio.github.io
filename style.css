@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Segoe UI", Helvetica, Arial;
     background-color: rgb(40, 40, 40);
     color: white;
 
     margin-left: 0;
+    margin-top: 55.2px;
 }
 
 /* styles for classes that can be appended to other elements */
@@ -83,6 +84,7 @@ body {
     position: fixed;
     
     user-select: none;
+
     z-index: 1;
 
     top: 0;
@@ -95,7 +97,9 @@ body {
 
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
+        
+    font-family: "Lato", Helvetica, Arial;
+    font-size: 16.6px;
 
     transition-duration: 0.4s;
 }
