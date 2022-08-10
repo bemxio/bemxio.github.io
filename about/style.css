@@ -12,5 +12,14 @@
 }
 
 #about-cards {
-    text-align: center;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.about-card {
+    margin: 0px 10px 0px 10pxw;
 }
