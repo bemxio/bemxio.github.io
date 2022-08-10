@@ -14,5 +14,11 @@
 
 .projects-project {
     margin: 10px;
-    align-self: start;
+    align-self: center;
+    transition-duration: 0.4s;
+}
+
+.projects-project:hover {
+    filter: invert(100%);
+    background: black;
 }
