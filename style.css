@@ -105,8 +105,8 @@ body {
 }
 
 .button:hover {
-    color: black;
-    background: white;
+    filter: invert(100%);
+    background: black;
 }
 
 /* the disclaimer */
