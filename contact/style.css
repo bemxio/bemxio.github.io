@@ -36,11 +36,13 @@
 
 .contact-choice-content {
     text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0px 20px 0px 20px;
 }
 
 .contact-choice-address {
     font-size: 20px;
     font-weight: bold;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
