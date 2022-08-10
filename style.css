@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
 
 body {
-    font-family: "Segoe UI", Helvetica, Arial;
+    font-family: "Segoe UI", "Open Sans", Arial;
     background-color: rgb(40, 40, 40);
     color: white;
 
@@ -98,7 +98,7 @@ body {
     text-align: center;
     text-decoration: none;
         
-    font-family: "Lato", Helvetica, Arial;
+    font-family: "Lato", "Open Sans", Arial;
     font-size: 16.6px;
 
     transition-duration: 0.4s;
