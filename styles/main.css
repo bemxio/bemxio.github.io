@@ -90,7 +90,7 @@ body {
     top: 0;
     width: 100%;
 }
-  
+
 .button {
     display: block;
     color: white;
@@ -168,4 +168,28 @@ body {
 .makoto-shake {
     display: block;
     animation: shake-keyframe 0.2s ease 0s infinite normal forwards;
+}
+
+/* mobile device stuff */
+@media screen and (max-width: 880px) {
+    .button {
+        font-size: 11px;
+    }
+
+    .button img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .regular-padding {
+        padding: 10px;
+    }
+
+    .small-padding {
+        padding: 8px 5px;
+    }
+
+    #face {
+        width: 75%;
+    }
 }

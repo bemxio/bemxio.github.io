@@ -50,3 +50,27 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+/* mobile device stuff */
+@media screen and (max-width: 880px) {
+    #contact-title {
+        font-size: 32px;
+    }
+
+    #contact-choices {
+        flex-wrap: wrap;
+    }
+
+    .contact-choice {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-choice-title {
+        font-size: 20px;
+    }
+
+    .contact-choice-content {
+        font-size: 16px;
+    }
+}

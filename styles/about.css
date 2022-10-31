@@ -25,3 +25,21 @@
 .about-card {
     margin: 0px 10px 0px 10px;
 }
+
+/* mobile device stuff */
+@media screen and (max-width: 880px) {
+    #about-title {
+        font-size: 32px;
+    }
+
+    #about-content {
+        font-size: 12px;
+    }
+
+    .about-card img {
+        width: 100%;
+        height: 100%;
+
+        margin-bottom: 10px;
+    }
+}
