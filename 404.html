@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="refresh" content="0; url=/"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+        <link rel="stylesheet" href="/style.css"/>
+
+        <script src="/script.js" defer></script>
+
+        <meta property="og:title" content="bemxio"/>
+        <meta property="og:description" content="hi i am bem"/>
+        <meta property="og:image" content="/assets/embed.png"/>
+
+        <title>bemxio</title>
     </head>
 
     <body>
-        <script>
-            window.location.href = "/";
-        </script>
+        <div id="container">
+            <div id="status-code">404</div>
+
+            <div id="title">not found!</div>
+            <div id="subtitle">that URL doesn't exist, did you misspell something?</div>
+
+            <div id="hyperlinks">
+                <a class="hyperlink" href="/">
+                    <span class="hyperlink-logo">&#10229;</span>
+                    <span class="hyperlink-text">go back</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="footer">&copy; 2022-2025 bemxio. Licensed under the <a href="LICENSE.txt">MIT License</a>.</div>
     </body>
 </html>

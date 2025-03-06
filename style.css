@@ -78,6 +78,8 @@ body {
 }
 
 .hyperlink-logo {
+    font-size: 2em;
+
     width: 7.5%;
     height: auto;
 
@@ -188,6 +190,14 @@ body {
 
     background-image: url("assets/spaceship_engine_effect.png");
     background-position: 0 0;
+}
+
+/* 404 page */
+#status-code {
+    color: #1e1e1e;
+
+    font-size: 15em;
+    font-weight: bold;
 }
 
 /* responsive design!!! very awesome */
