@@ -78,7 +78,7 @@ body {
 }
 
 .hyperlink-logo {
-    font-size: 2em;
+    font-size: 1.5vw;
 
     width: 7.5%;
     height: auto;
@@ -200,7 +200,7 @@ body {
 #status-code {
     color: #1e1e1e;
 
-    font-size: 15em;
+    font-size: 10vw;
     font-weight: bold;
 }
 
@@ -208,5 +208,13 @@ body {
 @media screen and (max-width: 1000px) {
     #container {
         width: 75%;
+    }
+
+    .hyperlink-logo {
+        font-size: 3vw;
+    }
+
+    #status-code {
+        font-size: 20vw;
     }
 }
