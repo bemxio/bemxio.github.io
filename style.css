@@ -166,6 +166,10 @@ body {
     color: #484848;
 }
 
+#footer a {
+    color: #585858;
+}
+
 /* konami code */
 #spaceship {
     display: none;
