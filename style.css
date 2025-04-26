@@ -133,10 +133,6 @@ body {
     transform: rotateX(0deg) translateZ(calc(var(--cube-size) / 2));
 }
 
-#cube-back {
-    transform: rotateX(-180deg) translateZ(calc(var(--cube-size) / 2));
-}
-
 #cube-left {
     transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
