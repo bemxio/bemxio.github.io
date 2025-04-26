@@ -79,6 +79,12 @@ const cheatCodes = {
             x -= moveSpeed * Math.sin(rotation * Math.PI / 180) * acceleration;
             y += moveSpeed * Math.cos(rotation * Math.PI / 180) * acceleration;
 
+            if (x < 0) x = window.innerWidth;
+            if (x > window.innerWidth) x = 0;
+
+            if (y < 0) y = window.innerHeight;
+            if (y > window.innerHeight) y = 0;
+
             if (leftPressed) {
                 rotation -= turnSpeed;
             } else if (rightPressed) {
