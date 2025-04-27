@@ -19,6 +19,31 @@ const cheatCodes = {
 
         subtitle.textContent = "the bem cube";
     },
+    "gej": () => {
+        const face = document.getElementById("face");
+        const title = document.getElementById("title");
+        const subtitle = document.getElementById("subtitle");
+        const hyperlinks = document.getElementById("hyperlinks");
+        const favicon = document.querySelector("link[rel='icon']");
+
+        pop.play();
+
+        title.textContent = "NISZOgen";
+        subtitle.textContent = "200ms to nie są 2 sekundy?";
+
+        hyperlinks.innerHTML = `
+            <a class="hyperlink" href="https://niszogen.com">
+                <span class="hyperlink-logo">?</span>
+                <span class="hyperlink-text">co</span>
+            </a>
+        `;
+
+        face.src = "https://niszogen.com/logo.png";
+        face.style.width = "50%";
+
+        document.title = "NISZOgen";
+        favicon.href = "https://niszogen.com/logo.png";
+    },
     "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightba": () => {
         const spaceship = document.getElementById("spaceship");
         const subtitle = document.getElementById("subtitle");
