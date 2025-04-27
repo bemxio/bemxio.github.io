@@ -28,14 +28,10 @@ const cheatCodes = {
 
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 4;
+
         let rotation = 0;
-
         let acceleration = 0.0;
-
-        let upPressed = false;
-        let downPressed = false;
-        let leftPressed = false;
-        let rightPressed = false;
+        let direction = 0;
 
         pop.play();
 
@@ -47,32 +43,32 @@ const cheatCodes = {
         document.addEventListener("keydown", (event) => {
             switch (event.key) {
                 case "ArrowUp":
-                    upPressed = true; break;
+                    direction |= 1 << 0; break;
                 case "ArrowDown":
-                    downPressed = true; break;
+                    direction |= 1 << 1; break;
                 case "ArrowLeft":
-                    leftPressed = true; break;
+                    direction |= 1 << 2; break;
                 case "ArrowRight":
-                    rightPressed = true; break;
+                    direction |= 1 << 3; break;
             }
         });
         document.addEventListener("keyup", (event) => {
             switch (event.key) {
                 case "ArrowUp":
-                    upPressed = false; break;
+                    direction &= ~(1 << 0); break;
                 case "ArrowDown":
-                    downPressed = false; break;
+                    direction &= ~(1 << 1); break;
                 case "ArrowLeft":
-                    leftPressed = false; break;
+                    direction &= ~(1 << 2); break;
                 case "ArrowRight":
-                    rightPressed = false; break;
+                    direction &= ~(1 << 3); break;
             }
         });
 
         setInterval(() => {
-            if (upPressed) {
+            if (direction & 1 << 0) {
                 acceleration = Math.max(-1.0, acceleration - accelerationSpeed);
-            } else if (downPressed) {
+            } else if (direction & 1 << 1) {
                 acceleration = Math.min(1.0, acceleration + accelerationSpeed);
             }
 
@@ -85,9 +81,9 @@ const cheatCodes = {
             if (y < 0) y = window.innerHeight;
             if (y > window.innerHeight) y = 0;
 
-            if (leftPressed) {
+            if (direction & 1 << 2) {
                 rotation -= turnSpeed;
-            } else if (rightPressed) {
+            } else if (direction & 1 << 3) {
                 rotation += turnSpeed;
             }
 
@@ -101,7 +97,7 @@ const cheatCodes = {
             spaceship.style.top = `${y}px`;
             spaceship.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
 
-            if (upPressed || downPressed) {
+            if (direction & 3) {
                 effect.style.backgroundPosition = `-48px -48px`;
                 sound.play();
             } else {
