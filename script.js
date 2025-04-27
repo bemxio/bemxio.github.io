@@ -115,7 +115,12 @@ const cheatCodes = {
 };
 
 // main stuff
+const params = new URLSearchParams(window.location.search);
 let buffer = "";
+
+if (params.has("egg")) {
+    cheatCodes[params.get("egg")]();
+}
 
 document.addEventListener("keydown", (event) => {
     buffer += event.key.toLowerCase();
