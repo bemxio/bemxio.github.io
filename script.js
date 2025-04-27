@@ -75,11 +75,17 @@ const cheatCodes = {
             x -= moveSpeed * Math.sin(rotation * Math.PI / 180) * acceleration;
             y += moveSpeed * Math.cos(rotation * Math.PI / 180) * acceleration;
 
-            if (x < 0) x = window.innerWidth;
-            if (x > window.innerWidth) x = 0;
+            if (x + spaceship.offsetWidth / 2 < 0) {
+                x = window.innerWidth + spaceship.offsetWidth / 2;
+            } else if (x - spaceship.offsetWidth / 2 > window.innerWidth) {
+                x = -spaceship.offsetWidth / 2;
+            }
 
-            if (y < 0) y = window.innerHeight;
-            if (y > window.innerHeight) y = 0;
+            if (y + spaceship.offsetHeight / 2 < 0) {
+                y = window.innerHeight + spaceship.offsetHeight / 2;
+            } else if (y - spaceship.offsetHeight / 2 > window.innerHeight) {
+                y = -spaceship.offsetHeight / 2;
+            }
 
             if (direction & 1 << 2) {
                 rotation -= turnSpeed;
