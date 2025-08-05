@@ -47,7 +47,7 @@ const cheatCodes = {
         document.title = "NISZOgen";
         favicon.href = "https://niszogen.com/logo.png";
     },
-    "slay": () => {
+    "girlboss": () => {
         const container = document.getElementById("container");
 
         const face = container.children[0];
@@ -187,6 +187,10 @@ const cheatCodes = {
         }, 1000 / 60);
     }
 };
+
+// aliases
+cheatCodes.slay = cheatCodes.girlboss;
+cheatCodes.co = cheatCodes.gej;
 
 // cheat code listeners
 document.addEventListener("keydown", (event) => {
