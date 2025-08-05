@@ -1,10 +1,12 @@
-// constants
+// variables
 const button = document.getElementById("footer-button");
 const pop = new Audio("/assets/pop.mp3");
 
+let buffer = "";
+
+let accelerationSpeed = 0.1;
 let moveSpeed = 5;
 let turnSpeed = 5;
-let accelerationSpeed = 0.1;
 
 // functions for cheat codes
 const cheatCodes = {
@@ -50,7 +52,7 @@ const cheatCodes = {
         const subtitle = document.getElementById("subtitle");
 
         const effect = document.getElementById("spaceship-effect");
-        const sound = new Audio("assets/spaceship_engine_sound.mp3"); // synthetic low-rev engine.wav by Timbre -- https://freesound.org/s/115271/ -- License: Attribution NonCommercial 4.0
+        const sound = new Audio("/assets/spaceship_engine_sound.mp3"); // synthetic low-rev engine.wav by Timbre -- https://freesound.org/s/115271/ -- License: Attribution NonCommercial 4.0
 
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 4;
@@ -58,6 +60,16 @@ const cheatCodes = {
         let rotation = 0;
         let acceleration = 0.0;
         let direction = 0;
+
+        if (window.location.hash) {
+            const values = window.location.hash.slice(1).split(",");
+
+            if (values.length == 3) {
+                accelerationSpeed = parseFloat(values[0]);
+                moveSpeed = parseFloat(values[1]);
+                turnSpeed = parseFloat(values[2]);
+            }
+        }
 
         pop.play();
 
@@ -141,8 +153,6 @@ const cheatCodes = {
 };
 
 // cheat code listeners
-let buffer = "";
-
 document.addEventListener("keydown", (event) => {
     buffer += event.key.toLowerCase();
 
