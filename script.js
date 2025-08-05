@@ -47,6 +47,42 @@ const cheatCodes = {
         document.title = "NISZOgen";
         favicon.href = "https://niszogen.com/logo.png";
     },
+    "slay": () => {
+        const container = document.getElementById("container");
+
+        const face = container.children[0];
+        const title = container.children[2];
+        const subtitle = container.children[3];
+        const hyperlinks = container.children[4];
+        const footer = document.getElementById("footer");
+
+        pop.play();
+
+        face.src = "/assets/girlboss_pfp.jpg";
+        face.style.width = "50%";
+        face.style.borderRadius = "50%";
+        face.style.marginBottom = "0";
+
+        title.textContent = "✨ bemxio ✨";
+        title.style.fontSize = "4em";
+
+        subtitle.textContent = "hi stalker 🙄💅";
+
+        document.body.style.backgroundColor = "#ff91af";
+        container.style.backgroundColor = "#ff69b4";
+
+        for (const hyperlink of hyperlinks.children) {
+            hyperlink.style.backgroundColor = "#ff1493";
+        }
+
+        footer.style.color = "#ff1493";
+
+        for (const link of footer.children) {
+            link.style.color = "#ff1493";
+        }
+
+        document.body.style.fontFamily = "\"Comic Relief\", sans-serif";
+    },
     "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightba": () => {
         const spaceship = document.getElementById("spaceship");
         const subtitle = document.getElementById("subtitle");
