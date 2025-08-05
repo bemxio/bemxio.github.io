@@ -1,11 +1,12 @@
 // constants
+const button = document.getElementById("footer-button");
 const pop = new Audio("/assets/pop.mp3");
 
-const moveSpeed = 5;
-const turnSpeed = 5;
-const accelerationSpeed = 0.1;
+let moveSpeed = 5;
+let turnSpeed = 5;
+let accelerationSpeed = 0.1;
 
-// cheat codes
+// functions for cheat codes
 const cheatCodes = {
     "3d": () => {
         const cube = document.getElementById("cube");
@@ -139,18 +140,21 @@ const cheatCodes = {
     }
 };
 
-// main stuff
-const params = new URLSearchParams(window.location.search);
+// cheat code listeners
 let buffer = "";
-
-if (params.has("egg")) {
-    cheatCodes[params.get("egg")]();
-}
 
 document.addEventListener("keydown", (event) => {
     buffer += event.key.toLowerCase();
 
     if (buffer in cheatCodes) {
         cheatCodes[buffer]();
+    }
+});
+
+button.addEventListener("click", () => {
+    let input = prompt("Enter the code:");
+
+    if (input in cheatCodes) {
+        cheatCodes[input]();
     }
 });
