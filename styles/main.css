@@ -106,8 +106,6 @@ body {
 }
 
 #cube {
-    background-image: url("/assets/embed.png");
-
     width: var(--cube-size);
     height: var(--cube-size);
 
@@ -125,8 +123,7 @@ body {
     width: inherit;
     height: inherit;
 
-    background-image: inherit;
-
+    background-image: url("/assets/embed.png");
     background-size: 100%;
     background-position: center;
 
