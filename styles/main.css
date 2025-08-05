@@ -106,7 +106,7 @@ body {
 }
 
 #cube {
-    background-image: url("assets/embed.png");
+    background-image: url("/assets/embed.png");
 
     width: var(--cube-size);
     height: var(--cube-size);
