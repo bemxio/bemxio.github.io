@@ -20,6 +20,12 @@ function importCSSfromURL(url) {
     document.head.appendChild(link);
 }
 
+function redirectToURL(url) {
+    return () => {
+        window.location.href = url;
+    };
+}
+
 // functions for cheat codes
 const cheatCodes = {
     "3d": () => {
@@ -29,34 +35,6 @@ const cheatCodes = {
         face.style.display = "none";
 
         subtitle.textContent = "the bem cube";
-    },
-    "gej": () => {
-        pop.play();
-
-        title.textContent = "NISZOgen";
-        subtitle.textContent = "200ms to nie są 2 sekundy?";
-        hyperlinks.innerHTML = `
-            <a class="hyperlink" href="https://niszogen.com">
-                <span class="hyperlink-logo">?</span>
-                <span class="hyperlink-text">co</span>
-            </a>
-        `;
-
-        face.src = "https://niszogen.com/logo.png";
-
-        document.title = "NISZOgen";
-        favicon.href = "https://niszogen.com/logo.png";
-
-        importCSSfromURL("/styles/niszogen.css");
-    },
-    "girlboss": () => {
-        pop.play();
-
-        title.textContent = "✨ bemxio ✨";
-        subtitle.textContent = "hi stalker 🙄💅";
-        face.src = "/assets/girlboss_pfp.jpg";
-
-        importCSSfromURL("/styles/girlboss.css");
     },
     "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightba": () => {
         const sound = new Audio("/assets/spaceship_engine_sound.mp3"); // synthetic low-rev engine.wav by Timbre -- https://freesound.org/s/115271/ -- License: Attribution NonCommercial 4.0
@@ -160,12 +138,41 @@ const cheatCodes = {
                 sound.pause();
             }
         }, 1000 / 60);
+    },
+    "dvd": redirectToURL("https://dvd.bemxio.xyz/"),
+    "gej": () => {
+        pop.play();
+
+        title.textContent = "NISZOgen";
+        subtitle.textContent = "200ms to nie są 2 sekundy?";
+        hyperlinks.innerHTML = `
+            <a class="hyperlink" href="https://niszogen.com">
+                <span class="hyperlink-logo">?</span>
+                <span class="hyperlink-text">co</span>
+            </a>
+        `;
+
+        face.src = "https://niszogen.com/logo.png";
+
+        document.title = "NISZOgen";
+        favicon.href = "https://niszogen.com/logo.png";
+
+        importCSSfromURL("/styles/niszogen.css");
+    },
+    "girlboss": () => {
+        pop.play();
+
+        title.textContent = "✨ bemxio ✨";
+        subtitle.textContent = "hi stalker 🙄💅";
+        face.src = "/assets/girlboss_pfp.jpg";
+
+        importCSSfromURL("/styles/girlboss.css");
     }
 };
 
 // aliases
-cheatCodes.slay = cheatCodes.girlboss;
 cheatCodes.co = cheatCodes.gej;
+cheatCodes.slay = cheatCodes.girlboss;
 
 // cheat code listeners
 let buffer = "";
