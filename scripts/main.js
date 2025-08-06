@@ -1,9 +1,16 @@
-// variables
-const button = document.getElementById("footer-button");
+// constants
+const cube = document.getElementById("cube");
+const face = document.getElementById("face");
+const title = document.getElementById("title");
+const subtitle = document.getElementById("subtitle");
+const hyperlinks = document.getElementById("hyperlinks");
+const spaceship = document.getElementById("spaceship");
+const spaceshipEffect = document.getElementById("spaceship-effect");
+const favicon = document.querySelector("link[rel='icon']");
+
 const pop = new Audio("/assets/pop.mp3");
 
-let buffer = "";
-
+// variables for spaceship speed
 let accelerationSpeed = 0.1;
 let moveSpeed = 5;
 let turnSpeed = 5;
@@ -21,10 +28,6 @@ function importCSSfromURL(url) {
 // functions for cheat codes
 const cheatCodes = {
     "3d": () => {
-        const cube = document.getElementById("cube");
-        const face = document.getElementById("face");
-        const subtitle = document.getElementById("subtitle");
-
         pop.play();
 
         cube.style.display = "block";
@@ -33,12 +36,6 @@ const cheatCodes = {
         subtitle.textContent = "the bem cube";
     },
     "gej": () => {
-        const face = document.getElementById("face");
-        const title = document.getElementById("title");
-        const subtitle = document.getElementById("subtitle");
-        const hyperlinks = document.getElementById("hyperlinks");
-        const favicon = document.querySelector("link[rel='icon']");
-
         pop.play();
 
         title.textContent = "NISZOgen";
@@ -58,12 +55,6 @@ const cheatCodes = {
         importCSSfromURL("/styles/niszogen.css");
     },
     "girlboss": () => {
-        const container = document.getElementById("container");
-
-        const face = container.children[0];
-        const title = container.children[2];
-        const subtitle = container.children[3];
-
         pop.play();
 
         title.textContent = "✨ bemxio ✨";
@@ -73,18 +64,14 @@ const cheatCodes = {
         importCSSfromURL("/styles/girlboss.css");
     },
     "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightba": () => {
-        const spaceship = document.getElementById("spaceship");
-        const subtitle = document.getElementById("subtitle");
-
-        const effect = document.getElementById("spaceship-effect");
         const sound = new Audio("/assets/spaceship_engine_sound.mp3"); // synthetic low-rev engine.wav by Timbre -- https://freesound.org/s/115271/ -- License: Attribution NonCommercial 4.0
 
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 4;
 
-        let rotation = 0;
         let acceleration = 0.0;
         let direction = 0;
+        let rotation = 0;
 
         if (window.location.hash) {
             const values = window.location.hash.slice(1).split(",");
@@ -167,10 +154,10 @@ const cheatCodes = {
             spaceship.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
 
             if (direction & 3) {
-                effect.style.backgroundPosition = `-48px -48px`;
+                spaceshipEffect.style.backgroundPosition = `-48px -48px`;
                 sound.play();
             } else {
-                effect.style.backgroundPosition = `0 0`;
+                spaceshipEffect.style.backgroundPosition = `0 0`;
                 sound.pause();
             }
         }, 1000 / 60);
@@ -182,6 +169,8 @@ cheatCodes.slay = cheatCodes.girlboss;
 cheatCodes.co = cheatCodes.gej;
 
 // cheat code listeners
+let buffer = "";
+
 document.addEventListener("keydown", (event) => {
     buffer += event.key.toLowerCase();
 
@@ -189,6 +178,8 @@ document.addEventListener("keydown", (event) => {
         cheatCodes[buffer]();
     }
 });
+
+const button = document.getElementById("footer-button");
 
 button.addEventListener("click", () => {
     let input = prompt("Enter the code:");
