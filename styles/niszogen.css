@@ -38,4 +38,8 @@ body {
     #title {
         font-size: 3.5em;
     }
+
+    .hyperlink-logo {
+        font-size: 5vw;
+    }
 }
