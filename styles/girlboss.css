@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap");
 
 body {
     background-color: #ff91af;
@@ -34,4 +34,10 @@ body {
 
 #footer a {
     color: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+    #title {
+        font-size: 2.5em;
+    }
 }
