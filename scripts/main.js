@@ -140,7 +140,7 @@ const cheatCodes = {
         }, 1000 / 60);
     },
     "dvd": redirectToURL("https://dvd.bemxio.xyz/"),
-    "gej": () => {
+    "gejem": () => {
         pop.play();
 
         title.textContent = "NISZOgen";
@@ -174,7 +174,7 @@ const cheatCodes = {
 };
 
 // aliases
-cheatCodes.co = cheatCodes.gej;
+cheatCodes.co = cheatCodes.gejem;
 cheatCodes.slay = cheatCodes.girlboss;
 
 // cheat code listeners
