@@ -8,9 +8,6 @@ body {
 
     height: 100%;
     overflow: hidden;
-
-    --cube-size: 150px;
-    --transition-duration: 0.4s;
 }
 
 /* main container for everything */
@@ -28,8 +25,6 @@ body {
 
     background-color: #141414;
     text-align: center;
-
-    transition-duration: var(--transition-duration);
 }
 
 #face {
@@ -59,7 +54,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    transition-duration: var(--transition-duration);
+    transition-duration: 0.4s;
 
     width: 100%;
     height: 7.5vh;
@@ -105,6 +100,8 @@ body {
 }
 
 #cube {
+    --cube-size: 150px;
+
     width: var(--cube-size);
     height: var(--cube-size);
 
