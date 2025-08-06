@@ -166,6 +166,9 @@ const cheatCodes = {
         subtitle.textContent = "hi stalker 🙄💅";
         face.src = "/assets/girlboss_pfp.jpg";
 
+        document.title = "✨ bemxio ✨";
+        favicon.href = "/assets/girlboss_pfp.jpg";
+
         importCSSfromURL("/styles/girlboss.css");
     }
 };

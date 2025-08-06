@@ -23,6 +23,11 @@ body {
     background-color: #ff1493;
 }
 
+.hyperlink:hover {
+    background-color: #ffb6c1;
+    filter: none;
+}
+
 #footer {
     color: #ff1493;
 }
