@@ -8,6 +8,16 @@ let accelerationSpeed = 0.1;
 let moveSpeed = 5;
 let turnSpeed = 5;
 
+// utility functions
+function importCSSfromURL(url) {
+    const link = document.createElement("link");
+
+    link.rel = "stylesheet";
+    link.href = url;
+
+    document.head.appendChild(link);
+}
+
 // functions for cheat codes
 const cheatCodes = {
     "3d": () => {
@@ -33,7 +43,6 @@ const cheatCodes = {
 
         title.textContent = "NISZOgen";
         subtitle.textContent = "200ms to nie są 2 sekundy?";
-
         hyperlinks.innerHTML = `
             <a class="hyperlink" href="https://niszogen.com">
                 <span class="hyperlink-logo">?</span>
@@ -42,10 +51,11 @@ const cheatCodes = {
         `;
 
         face.src = "https://niszogen.com/logo.png";
-        face.style.width = "50%";
 
         document.title = "NISZOgen";
         favicon.href = "https://niszogen.com/logo.png";
+
+        importCSSfromURL("/styles/niszogen.css");
     },
     "girlboss": () => {
         const container = document.getElementById("container");
@@ -53,35 +63,14 @@ const cheatCodes = {
         const face = container.children[0];
         const title = container.children[2];
         const subtitle = container.children[3];
-        const hyperlinks = container.children[4];
-        const footer = document.getElementById("footer");
 
         pop.play();
 
-        face.src = "/assets/girlboss_pfp.jpg";
-        face.style.width = "50%";
-        face.style.borderRadius = "50%";
-        face.style.marginBottom = "0";
-
         title.textContent = "✨ bemxio ✨";
-        title.style.fontSize = "4em";
-
         subtitle.textContent = "hi stalker 🙄💅";
+        face.src = "/assets/girlboss_pfp.jpg";
 
-        document.body.style.backgroundColor = "#ff91af";
-        container.style.backgroundColor = "#ff69b4";
-
-        for (const hyperlink of hyperlinks.children) {
-            hyperlink.style.backgroundColor = "#ff1493";
-        }
-
-        footer.style.color = "#ff1493";
-
-        for (const link of footer.children) {
-            link.style.color = "#ff1493";
-        }
-
-        document.body.style.fontFamily = "\"Comic Relief\", sans-serif";
+        importCSSfromURL("/styles/girlboss.css");
     },
     "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightba": () => {
         const spaceship = document.getElementById("spaceship");

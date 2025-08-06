@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap');
+
+body {
+    background-color: #ff91af;
+    font-family: "Comic Relief", sans-serif;
+}
+
+#container {
+    background-color: #ff69b4;
+}
+
+#face {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+#title {
+    font-size: 4em;
+}
+
+.hyperlink {
+    background-color: #ff1493;
+}
+
+#footer {
+    color: #ff1493;
+}
+
+#footer a {
+    color: inherit;
+}
