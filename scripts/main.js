@@ -10,11 +10,6 @@ const favicon = document.querySelector("link[rel='icon']");
 
 const pop = new Audio("/assets/pop.mp3");
 
-// variables for spaceship speed
-let accelerationSpeed = 0.1;
-let moveSpeed = 5;
-let turnSpeed = 5;
-
 // utility functions
 function importCSSfromURL(url) {
     const link = document.createElement("link");
@@ -72,6 +67,10 @@ const cheatCodes = {
         let acceleration = 0.0;
         let direction = 0;
         let rotation = 0;
+
+        let accelerationSpeed = 0.1;
+        let moveSpeed = 5;
+        let turnSpeed = 5;
 
         if (window.location.hash) {
             const values = window.location.hash.slice(1).split(",");
