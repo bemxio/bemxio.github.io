@@ -139,6 +139,7 @@ const cheatCodes = {
             }
         }, 1000 / 60);
     },
+    "chat": redirectToURL("https://chat.bemxio.xyz/"),
     "dvd": redirectToURL("https://dvd.bemxio.xyz/"),
     "gejem": () => {
         importCSSfromURL("/styles/niszogen.css");
@@ -171,8 +172,7 @@ const cheatCodes = {
 
         pop.play();
     },
-    "retro": redirectToURL("https://old.bemxio.xyz/"),
-    "signalbutbetter": redirectToURL("https://chat.bemxio.xyz/")
+    "goodolddays": redirectToURL("https://old.bemxio.xyz/"),
 };
 
 // aliases
