@@ -1,12 +1,17 @@
 // constants
-const cube = document.getElementById("cube");
-const face = document.getElementById("face");
-const title = document.getElementById("title");
-const subtitle = document.getElementById("subtitle");
-const hyperlinks = document.getElementById("hyperlinks");
+const container = document.getElementById("container");
+const favicon = document.querySelector("link[rel='icon']");
+
+const face = container.children[0];
+const cube = container.children[1];
+const title = container.children[2];
+const subtitle = container.children[3];
+const hyperlinks = container.children[4];
+
 const spaceship = document.getElementById("spaceship");
 const spaceshipEffect = document.getElementById("spaceship-effect");
-const favicon = document.querySelector("link[rel='icon']");
+const spinner = document.getElementById("spinner");
+const spinnerButton = document.getElementById("spinner-button");
 
 const pop = new Audio("/assets/pop.mp3");
 
@@ -173,6 +178,46 @@ const cheatCodes = {
         pop.play();
     },
     "goodolddays": redirectToURL("https://old.bemxio.xyz/"),
+    "spin": () => {
+        let isSpinning = false;
+
+        spinnerButton.addEventListener("click", () => {
+            if (container.style.display === "none") {
+                container.style.display = "block";
+                spinner.style.display = "none";
+            } else {
+                container.style.display = "none";
+                spinner.style.display = "block";
+            }
+        });
+
+        spinner.addEventListener("click", () => {
+            if (!isSpinning) {
+                isSpinning = true;
+            } else {
+                return;
+            }
+
+            let animation = spinner.animate(
+                [
+                    { transform: "translate(-50%, -50%) rotate(0deg)" },
+                    { transform: "translate(-50%, -50%) rotate(360deg)" }
+                ],
+                {
+                    duration: 1500,
+                    easing: "ease",
+                    iterations: 1
+                }
+            );
+
+            animation.addEventListener("finish", () => {
+                isSpinning = false;
+            });
+        });
+
+        spinnerButton.style.display = "block";
+        pop.play();
+    }
 };
 
 // aliases
