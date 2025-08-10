@@ -190,7 +190,6 @@ const cheatCodes = {
                 spinner.style.display = "block";
             }
         });
-
         spinner.addEventListener("click", () => {
             if (!isSpinning) {
                 isSpinning = true;

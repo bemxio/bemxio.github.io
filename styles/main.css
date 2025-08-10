@@ -118,7 +118,7 @@ body {
     user-select: none;
 }
 
-#spinner-button:hover {
+#spinner-button:active {
     font-size: 3.5em;
 }
 
@@ -251,6 +251,10 @@ body {
 
 /* responsive design!!! very awesome */
 @media screen and (max-width: 1000px) {
+    #spinner {
+        width: 75%;
+    }
+
     #container {
         width: 75%;
     }
