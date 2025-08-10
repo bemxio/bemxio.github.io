@@ -8,6 +8,8 @@ body {
 
     height: 100%;
     overflow: hidden;
+
+    transition-duration: 1.0s;
 }
 
 /* main container for everything */
@@ -25,13 +27,17 @@ body {
 
     background-color: #141414;
     text-align: center;
+
+    transition-duration: inherit;
 }
 
 #face {
+    margin-bottom: 5%;
+
     width: 80%;
     height: 25%;
 
-    margin-bottom: 5%;
+    transition-duration: inherit;
 }
 
 #title {
@@ -54,7 +60,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
 
     width: 100%;
     height: 7.5vh;

@@ -141,7 +141,12 @@ const cheatCodes = {
     },
     "dvd": redirectToURL("https://dvd.bemxio.xyz/"),
     "gejem": () => {
-        pop.play();
+        importCSSfromURL("/styles/niszogen.css");
+
+        document.title = "NISZOgen";
+        favicon.href = "/assets/niszogen.png";
+
+        face.src = "/assets/niszogen.png";
 
         title.textContent = "NISZOgen";
         subtitle.textContent = "200ms to nie są 2 sekundy?";
@@ -152,24 +157,19 @@ const cheatCodes = {
             </a>
         `;
 
-        face.src = "https://niszogen.com/logo.png";
-
-        document.title = "NISZOgen";
-        favicon.href = "https://niszogen.com/logo.png";
-
-        importCSSfromURL("/styles/niszogen.css");
+        pop.play();
     },
     "girlboss": () => {
-        pop.play();
-
-        title.textContent = "✨ bemxio ✨";
-        subtitle.textContent = "hi stalker 🙄💅";
-        face.src = "/assets/girlboss_pfp.jpg";
+        importCSSfromURL("/styles/girlboss.css");
 
         document.title = "✨ bemxio ✨";
         favicon.href = "/assets/girlboss_pfp.jpg";
 
-        importCSSfromURL("/styles/girlboss.css");
+        face.src = "/assets/girlboss_pfp.jpg";
+        title.textContent = "✨ bemxio ✨";
+        subtitle.textContent = "hi stalker 🙄💅";
+
+        pop.play();
     },
     "retro": redirectToURL("https://old.bemxio.xyz/"),
     "signalbutbetter": redirectToURL("https://chat.bemxio.xyz/")
