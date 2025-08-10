@@ -243,4 +243,4 @@ button.addEventListener("click", () => {
     if (input in cheatCodes) {
         cheatCodes[input]();
     }
-});
+}, { once: true });
