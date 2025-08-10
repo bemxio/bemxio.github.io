@@ -170,7 +170,9 @@ const cheatCodes = {
         favicon.href = "/assets/girlboss_pfp.jpg";
 
         importCSSfromURL("/styles/girlboss.css");
-    }
+    },
+    "retro": redirectToURL("https://old.bemxio.xyz/"),
+    "signalbutbetter": redirectToURL("https://chat.bemxio.xyz/")
 };
 
 // aliases
