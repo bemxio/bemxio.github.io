@@ -100,43 +100,21 @@ body {
     font-size: 1.5em;
 }
 
-/* the bemmy spinner */
-#spinner-button {
-    display: none;
-
+#footer {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
 
-    top: 48px;
-    left: 48px;
+    bottom: 0;
+    right: 0;
 
-    font-size: 3em;
+    font-size: 0.75em;
+    margin-right: 5px;
 
-    cursor: pointer;
-    transition-duration: 0.25s;
-
-    user-select: none;
+    color: #484848;
 }
 
-#spinner-button:active {
-    font-size: 3.5em;
-}
-
-#spinner {
-    display: none;
-
-    position: absolute;
-    transform: translate(-50%, -50%);
-
-    user-select: none;
-
-    top: 50%;
-    left: 50%;
-
-    width: 45%;
-    height: auto;
-
-    filter: invert(20%);
+#footer a {
+    color: #585858;
 }
 
 /* the bemxio cube */
@@ -197,24 +175,6 @@ body {
     transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
-/* footer (lol) */
-#footer {
-    position: absolute;
-    transform: translate(0%, -50%);
-
-    bottom: 0;
-    right: 0;
-
-    font-size: 0.75em;
-    margin-right: 5px;
-
-    color: #484848;
-}
-
-#footer a {
-    color: #585858;
-}
-
 /* konami code */
 #spaceship {
     display: none;
@@ -241,6 +201,49 @@ body {
     background-position: 0 0;
 }
 
+/* the bemmy spinner */
+#spinner-button {
+    display: none;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    top: 48px;
+    left: 48px;
+
+    font-size: 3em;
+
+    cursor: pointer;
+    transition-duration: 0.25s;
+
+    user-select: none;
+}
+
+#spinner-button:hover {
+    font-size: 3.5em;
+}
+
+#spinner-button:active {
+    font-size: 3em;
+}
+
+#spinner {
+    display: none;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    user-select: none;
+
+    top: 50%;
+    left: 50%;
+
+    width: 45%;
+    height: auto;
+
+    filter: invert(20%);
+}
+
 /* 404 page */
 #status-code {
     color: #1e1e1e;
@@ -249,7 +252,7 @@ body {
     font-weight: bold;
 }
 
-/* responsive design!!! very awesome */
+/* stuff for smaller screens */
 @media screen and (max-width: 1000px) {
     #spinner {
         width: 75%;

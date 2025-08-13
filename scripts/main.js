@@ -13,6 +13,7 @@ const spaceshipEffect = document.getElementById("spaceship-effect");
 const spinner = document.getElementById("spinner");
 const spinnerButton = document.getElementById("spinner-button");
 
+const ambience = new Audio("/assets/ambience.mp3");
 const pop = new Audio("/assets/pop.mp3");
 
 // utility functions
@@ -215,7 +216,19 @@ const cheatCodes = {
         });
 
         spinnerButton.style.display = "block";
-        pop.play();
+        spinnerButton.animate(
+            [
+                { opacity: 0.0 },
+                { opacity: 1.0 }
+            ],
+            {
+                duration: 7000,
+                easing: "ease",
+                fill: "forwards"
+            }
+        );
+
+        ambience.play();
     }
 };
 
